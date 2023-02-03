@@ -10,6 +10,7 @@ import img3 from "../Assets/sylvia3.jpg"
 import img4 from "../Assets/sylvia5.jpg"
 import img5 from "../Assets/sylvia7.jpg"
 import img6 from "../Assets/house3.jpg"
+import { Link } from 'react-router-dom';
 
 const Property = () => {
 
@@ -29,15 +30,15 @@ const Property = () => {
             <Wrapper>
                 <Properties>
                     Popular Properties
-                    <Button>View all Properties</Button>
+                    <Button to="/all-properties">View all Properties</Button>
                 </Properties>
                 <Slider {...settings}>
                     <div>
                         <HouseCard 
                         img ={img1}
-                        price = "$1,291,000"
-                        address='5232 California Fake, Ave. 21BC'
-                        country='California, USA'
+                        price = "#1,200,000"
+                        address='Phase 1 Victoria Island'
+                        country='Lagos, Nigeria'
                         beds='2'
                         baths='2'
                          />
@@ -45,51 +46,51 @@ const Property = () => {
                     <div>
                         <HouseCard 
                         img ={img2}
-                        price = "$1,291,000"
-                        address='5232 California Fake, Ave. 21BC'
-                        country='California, USA'
-                        beds='2'
+                        price = "#4,200,000"
+                        address='457 Kwambenya Road'
+                        country='Accra, Ghana'
+                        beds='4'
                         baths='2'
                          />
                     </div>
                     <div>
                         <HouseCard 
                         img ={img3}
-                        price = "$1,291,000"
-                        address='5232 California Fake, Ave. 21BC'
-                        country='California, USA'
-                        beds='2'
+                        price = "#3,200,000"
+                        address='120 Divine Estate, Haruna'
+                        country='Apapa, Lagos'
+                        beds='3'
+                        baths='3'
+                         />
+                    </div>
+                    <div>
+                        <HouseCard 
+                        price = "#1,200,000"
+                        img ={img4}
+                        address='15 Bode Thomas, Ikorodu'
+                        country='Lagos, Nigeria'
+                        beds='3'
                         baths='2'
                          />
                     </div>
                     <div>
                         <HouseCard 
-                        price = "$1,291,000"
-                        img ={img4}
-                        address='5232 California Fake, Ave. 21BC'
-                        country='California, USA'
-                        beds='3'
-                        baths='3'
-                         />
-                    </div>
-                    <div>
-                        <HouseCard 
-                        price = "$1,291,000"
+                        price = "#2,600,000"
                         img ={img5}
-                        address='5232 California Fake, Ave. 21BC'
-                        country='California, USA'
+                        address='673 Fashansi Close, Ota'
+                        country='Iba, Lagos'
                         beds='3'
                         baths='3'
                          />
                     </div>
                     <div>
                         <HouseCard 
-                        price = "$1,291,000"
+                        price = "#1,002,000"
                         img ={img6}
-                        address='5232 California Fake, Ave. 21BC'
-                        country='California, USA'
-                        beds='3'
-                        baths='3'
+                        address='101 Augustine University'
+                        country='Mowe, Lagos-Ibadan'
+                        beds='4'
+                        baths='4'
                          />
                     </div>
                 </Slider>
@@ -144,7 +145,8 @@ const Movement = styled.div`
         color: #DADFE5;
     }
 `;
-const Button = styled.div`
+const Button = styled(Link)`
+text-decoration: none;
   width: 200px;
   height: 50px;
   border-radius: 30px;

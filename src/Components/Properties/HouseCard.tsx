@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components';
 import { FaBed, FaBath } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 interface house{
     img: string,
@@ -43,7 +44,7 @@ const HouseCard: React.FC<house> = (
                         {baths} baths
                     </Baths>
                 </Rooms>
-                <Button>See Details</Button>
+                <Button to="/property-details">See Details</Button>
                 </Wrapper>
             </HouseDescription>
         </Card>
@@ -111,7 +112,8 @@ const Rooms = styled.div`
 `;
 const Bed = styled.div``;
 const Baths = styled.div``;
-const Button = styled.div`
+const Button = styled(Link)`
+text-decoration: none;
   width: 130px;
   height: 40px;
   border-radius: 30px;

@@ -3,6 +3,7 @@ import { useRoutes } from 'react-router'
 import AboutUs from '../AboutUs/AboutUs'
 import Agents from '../Agents/Agents'
 import Properties from '../AllProperties/Properties'
+import SinglePropert from '../AllProperties/SinglePropert'
 import Login from '../Auth/Login'
 import SignUp from '../Auth/SignUp'
 import ContactUs from '../ContactUs/ContactUs'
@@ -40,6 +41,10 @@ const AllRoutes = () => {
         {
             path: "/all-properties",
             element: <Properties />
+        },
+        {
+            path : "/property-details",
+            element: <SinglePropert />
         },
         {
             path: "/upload-house",
