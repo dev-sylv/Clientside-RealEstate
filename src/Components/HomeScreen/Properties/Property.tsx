@@ -4,12 +4,12 @@ import HouseCard from './HouseCard';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import img1 from "../Assets/sylvia1.jpg"
-import img2 from "../Assets/sylvia2.jpg"
-import img3 from "../Assets/sylvia3.jpg"
-import img4 from "../Assets/sylvia5.jpg"
-import img5 from "../Assets/sylvia7.jpg"
-import img6 from "../Assets/house3.jpg"
+import img1 from "../../Assets/sylvia1.jpg"
+import img2 from "../../Assets/sylvia2.jpg"
+import img3 from "../../Assets/sylvia3.jpg"
+import img4 from "../../Assets/sylvia5.jpg"
+import img5 from "../../Assets/sylvia7.jpg"
+import img6 from "../../Assets/house3.jpg"
 import { Link } from 'react-router-dom';
 
 const Property = () => {

@@ -65,7 +65,7 @@ const Header = () => {
             {
                 show ? null : <MinimizedNav>
                 <Wrap>
-                        <Nav to="/">Home</Nav>
+                      <Nav to="/">Home</Nav>
                         <Nav to="/about-us">About</Nav>
                         <Nav to="/agents">Agents</Nav>
                         <Nav to="/services">Services</Nav>
@@ -112,7 +112,7 @@ const Menu = styled.div`
 `;
 
 const Container = styled.div`
-    /* position: fixed; */
+    position: fixed;
     z-index: 999;
     width: 100%;
     height: 70px;
