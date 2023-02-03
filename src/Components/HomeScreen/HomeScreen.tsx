@@ -1,7 +1,9 @@
 import React from 'react'
 import Hero from '../Hero/Hero'
+import PerfectHome from './PerfectHome'
 import Property from './Properties/Property'
 import Services from './Services/Services'
+import WhiteComp from './WhiteComp'
 
 const HomeScreen = () => {
   return (
@@ -9,6 +11,8 @@ const HomeScreen = () => {
       <Hero />
       <Property />
       <Services />
+      <WhiteComp />
+      <PerfectHome />
     </div>
   )
 }

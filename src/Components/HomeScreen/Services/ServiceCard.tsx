@@ -5,14 +5,15 @@ interface service {
     img: string;
     title: string;
     bio: string;
+    padding: string
 }
 
 const ServiceCard: React.FC<service> = ({
-    img, title, bio
+    img, title, bio, padding
 }) => {
   return (
     <div>
-        <Card>
+        <Card pad ={padding}>
             <Wrapper>
                 <img src={img} alt="" />
                 <h3>{title}</h3>
@@ -28,15 +29,16 @@ const ServiceCard: React.FC<service> = ({
 
 export default ServiceCard;
 
-const Card = styled.div`
+const Card = styled.div<{pad: string}>`
     width: 250px;
-    padding: 40px 0px 40px 0px;
+    padding: ${(props) => props.pad};
     margin: 20px;
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #005555;
+    border-radius: 5px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 `;
 const Wrapper = styled.div`

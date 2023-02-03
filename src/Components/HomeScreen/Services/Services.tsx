@@ -13,23 +13,27 @@ const Services = () => {
             <Wrapper>
               <ServiceCard
                 img={property}
-                title = ""
-                bio = ""
+                title = "Our Properties"
+                bio = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, accusamus."
+                padding='38px 0px 35px 0px'
               />
               <ServiceCard
                 img={sale}
-                title = ""
-                bio = ""
+                title = "Property for Sale"
+                bio = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, accusamus."
+                padding='40px 0px 40px 0px'
               />
               <ServiceCard
                 img={agent}
-                title = ""
-                bio = ""
+                title = "Real Estate Agent"
+                bio = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, accusamus."
+                padding='42px 0px 40px 0px'
               />
               <ServiceCard
                 img={house}
-                title = ""
-                bio = ""
+                title = "House for Sale"
+                bio = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, accusamus."
+                padding='40px 0px 40px 0px'
               />
             </Wrapper>
         </Container>
@@ -48,7 +52,10 @@ const Container = styled.div`
     justify-content: center;
 `;
 const Wrapper = styled.div`
-    background-color: red;
+    /* background-color: red; */
     width: 95%;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 `;
