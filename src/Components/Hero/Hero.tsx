@@ -4,10 +4,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from 'styled-components';
 import slide1 from "../Assets/counter-bg.jpg";
-import slide2 from "../Assets/house3.jpg";
-import slide3 from "../Assets/img_4.jpg";
+import slide2 from "../Assets/sylvia2.jpg";
+import slide3 from "../Assets/house-2.jpg";
 import slide4 from "../Assets/img_5.jpg";
-import slide5 from "../Assets/img3.jpg";
+import slide5 from "../Assets/sylvia4.jpg";
 import slide6 from "../Assets/img_3.jpg";
 
 const Hero = () => {
@@ -26,10 +26,7 @@ const Hero = () => {
         <Container>
         <Maintext>
             <h3>The Simplest <br /> Way to Find Property</h3>
-            <p>A small river named Duden flows by their place and supplies it with the necessary regeslia. </p>
-            <p>
-            It is a paradisematic country, in which roasted parts
-            </p>
+            <p>Search For Your Dream House - Easiest way to find your dream home </p>
           <InputField>
             <input type="search" placeholder = "Search by price, Agent, Location" />
             <Search>Search</Search>
