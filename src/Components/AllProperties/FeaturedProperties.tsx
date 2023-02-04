@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import img1 from "../../Assets/sylvia1.jpg"
-import img2 from "../../Assets/sylvia2.jpg"
-import img3 from "../../Assets/sylvia3.jpg"
-import img4 from "../../Assets/sylvia5.jpg"
-import img5 from "../../Assets/sylvia7.jpg"
-import img6 from "../../Assets/house3.jpg"
+import img1 from "../Assets/sylvia1.jpg"
+import img2 from "../Assets/sylvia2.jpg"
+import img3 from "../Assets/sylvia3.jpg"
+import img4 from "../Assets/sylvia5.jpg"
+import img5 from "../Assets/sylvia7.jpg"
+import img6 from "../Assets/house3.jpg"
 import { Link } from 'react-router-dom';
 import HouseCard from '../HomeScreen/Properties/HouseCard';
 
@@ -29,8 +29,7 @@ const FeaturedProperties = () => {
         <Container>
             <Wrapper>
                 <Properties>
-                    Popular Properties
-                    <Button to="/all-properties">View all Properties</Button>
+                    <h2>Featured Properties</h2>
                 </Properties>
                 <Slider {...settings}>
                     <div>
@@ -118,46 +117,9 @@ const Properties = styled.div`
     display: flex;
     width: 100%;
     padding: 10px 0px 10px 0px;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     color: #005555;
     font-size: 30px;
     font-weight: bold;
 `;
-const Movement = styled.div`
-    width: 75px;
-    height: 35px;
-    background-color: #DADFE5;
-    font-size: 15px;
-    border-radius: 30px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #005555;
-    cursor: pointer;
-    transition: all 350ms;
-    :hover{
-        background-color: #005555;
-        color: #DADFE5;
-    }
-`;
-const Button = styled(Link)`
-text-decoration: none;
-  width: 200px;
-  height: 50px;
-  border-radius: 30px;
-  background-color: #005555;
-  color: silver;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: lighter;
-  transition: all 350ms;
-  :hover{
-    transform: scale(1.05);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-  }
-
-`

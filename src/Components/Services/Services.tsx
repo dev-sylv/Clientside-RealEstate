@@ -1,8 +1,11 @@
 import React from 'react'
+import Hero from './Hero'
 
 const Services = () => {
   return (
-    <div>Services</div>
+    <div>
+      <Hero />
+    </div>
   )
 }
 
