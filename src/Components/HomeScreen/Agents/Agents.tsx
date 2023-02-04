@@ -5,74 +5,25 @@ import { AiFillHome } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { GiCheckedShield } from "react-icons/gi";
 
-const PerfectHome = () => {
+const Agents = () => {
   return (
     <div>
         <Container>
             <Wrapper>
-                <h1>Let's find home that's <br /> perfect for you</h1>
+                <h1>Our Agents</h1>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam enim pariatur similique debitis vel nisi qui reprehenderit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam enim pariatur similique debitis vel nisi qui reprehenderit totam? Quod maiores.
                 </p>
                 <Property>
-                    <First>
-                        <Div>
-                            <Circle>
-                                <AiFillHome />
-                            </Circle>
-                            <Text>
-                                <h3>2M Properties</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit. Nostrum iste.</p>
-                            </Text>
-                        </Div>
-                        <Div>
-                            <Circle>
-                                <CgProfile />
-                            </Circle>
-                            <Text>
-                                <h3>Top Rated Agents</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit. Nostrum iste.</p>
-                            </Text>
-                        </Div>
-                        <Div>
-                            <Circle>
-                                <GiCheckedShield />
-                            </Circle>
-                            <Text>
-                                <h3>Legit Properties</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit. Nostrum iste.</p>
-                            </Text>
-                        </Div>
-                    </First>
-                    <Second>
-                        <img src={hero} alt="" />
-                    </Second>
+                    
                 </Property>
-                <Agent>
-                    <div>
-                        <Num>40</Num>
-                        <Award># of Buy Properties</Award>
-                    </div>
-                    <div>
-                        <Num>50</Num>
-                        <Award># of Sell Properties</Award>
-                    </div>
-                    <div>
-                        <Num>100</Num>
-                        <Award># of All Properties</Award>
-                    </div>
-                    <div>
-                        <Num>20</Num>
-                        <Award># of Agents</Award>
-                    </div>
-                </Agent>
             </Wrapper>
         </Container>
     </div>
   )
 }
 
-export default PerfectHome;
+export default Agents;
 
 const Agent = styled.div`
     width: 95%;
