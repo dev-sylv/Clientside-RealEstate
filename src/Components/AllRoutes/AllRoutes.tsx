@@ -3,12 +3,12 @@ import { useRoutes } from 'react-router'
 import AboutUs from '../AboutUs/AboutUs'
 import Agents from '../Agents/Agents'
 import Properties from '../AllProperties/Properties'
-import SinglePropert from '../AllProperties/SinglePropert'
 import Login from '../Auth/Login'
 import SignUp from '../Auth/SignUp'
 import ContactUs from '../ContactUs/ContactUs'
 import HomeScreen from '../HomeScreen/HomeScreen'
 import Services from '../Services/Service'
+import SingleProperty from '../SingleProperty/SingleProperty'
 import UploadHouses from '../Upload Houses.tsx/UploadHouses'
 
 const AllRoutes = () => {
@@ -44,7 +44,7 @@ const AllRoutes = () => {
         },
         {
             path : "/property-details",
-            element: <SinglePropert />
+            element: <SingleProperty />
         },
         {
             path: "/upload-house",
