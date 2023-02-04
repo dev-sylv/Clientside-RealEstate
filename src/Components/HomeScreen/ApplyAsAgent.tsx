@@ -19,7 +19,7 @@ export default ApplyAgent;
 
 const Container = styled.div`
     width: 100%;
-    padding: 30px 0px 30px 0px;
+    padding: 70px 0px 70px 0px;
     background-color: white;
     display: flex;
     justify-content: center;

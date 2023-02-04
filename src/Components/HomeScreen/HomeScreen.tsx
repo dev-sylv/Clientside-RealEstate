@@ -1,5 +1,6 @@
 import React from 'react'
 import Hero from '../Hero/Hero'
+import Agents from './Agents/Agents'
 import ApplyAgent from './ApplyAsAgent'
 import PerfectHome from './PerfectHome'
 import Property from './Properties/Property'
@@ -15,6 +16,8 @@ const HomeScreen = () => {
       <WhiteComp />
       <PerfectHome />
       <ApplyAgent />
+      <Agents />
+
     </div>
   )
 }

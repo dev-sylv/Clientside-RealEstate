@@ -4,6 +4,7 @@ import hero from "../Assets/hero_bg_3.jpg";
 import { AiFillHome } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { GiCheckedShield } from "react-icons/gi";
+import img3 from "../../Assets/img3 (1).png"
 
 const Agents = () => {
   return (
@@ -12,11 +13,16 @@ const Agents = () => {
             <Wrapper>
                 <h1>Our Agents</h1>
                 <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam enim pariatur similique debitis vel nisi qui reprehenderit totam? Quod maiores.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam enim pariatur similique debitis vel nisi qui 
                 </p>
-                <Property>
-                    
-                </Property>
+                {/* <Property>
+                    <Card>
+                        <Img src={img3} />
+                        <h3>James Doe</h3>
+                        <p>Real Estate Agent</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere officiis inventore cumque tenetur laboriosam, minus culpa doloremque odio, neque molestias?</p>
+                    </Card>
+                </Property> */}
             </Wrapper>
         </Container>
     </div>
@@ -25,27 +31,28 @@ const Agents = () => {
 
 export default Agents;
 
-const Agent = styled.div`
-    width: 95%;
-    padding: 10px 0px 10px 0px;
-    /* background-color: red; */
+const Card = styled.div`
+    width: 350px;
+    padding: 20px 0px 20px 0px;
+    background-color: red;
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    color: #005555;
-    text-align: center;
+    justify-content: center;
+    flex-direction: column;
 `;
-const Num = styled.div`
-    font-size: 40px;
-    font-weight: bold;
-`;
-const Award = styled.div`
-    font-weight: 300;
+const Img = styled.img`
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    top: -40px;
 `;
 
 const Container = styled.div`
     width: 100%;
-    background-color: #F8F9FA;
+    background-color: #80808049;
     padding: 50px 0px 50px 0px;
     display: flex;
     justify-content: center;
@@ -70,57 +77,9 @@ const Wrapper = styled.div`
 `;
 const Property = styled.div`
     width: 95%;
-    /* background-color: blue; */
+    background-color: blue;
     padding: 30px 0px 30px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-`;
-const First = styled.div`
-    width: 40%;
-    /* background-color: green; */
-`;
-const Div = styled.div`
-    /* background-color: pink; */
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin: 20px;
-`;
-const Circle = styled.div`
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: #8080809b;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 350ms;
-    border: 3px solid #8080809b;
-    :hover{
-        border: 3px solid #005555;
-        border-color: #005555;
-    }
-`;
-const Text = styled.div`
-    width: 80%;
-    /* background-color: red; */
-    margin-left: 10px;
-    h3{
-        margin: 0;
-    }
-    p{
-        text-align: left;
-    }
-`;
-
-
-
-const Second = styled.div`
-    width: 50%;
-    img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
 `;
