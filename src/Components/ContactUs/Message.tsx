@@ -7,13 +7,12 @@ const Message = () => {
   return (
     <div>
         <Container>
-        
        <Wrapper>
           <Two>
             <Wrap2>
               <h2>Send me a message</h2>
-              <Button><a href="https://wa.me/233541516214">Hi me on whatsapp</a></Button>
-              <P>Don't have an account, please register <a href="/signup">here</a></P>
+              <Button><a href="https://wa.me/233541516214" target="_blank">Hi me on whatsapp</a></Button>
+              <P><a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank">Or send me an email</a></P>
             </Wrap2>
           </Two>
        </Wrapper>
@@ -26,7 +25,6 @@ export default Message;
 
 const Container = styled.div`
   width: 100%;
-  padding: 30px 0px 30px 0px;
   display: flex;
   /* background-color: red; */
   display: flex;
@@ -36,7 +34,6 @@ const Container = styled.div`
 const Wrapper = styled.div`
   display: flex;
   width: 80%;
-  height: 70vh;
   align-items: center;
   justify-content: center;
 `;
@@ -76,12 +73,12 @@ const Button = styled.div`
 `;
 const P = styled.div`
   color: #005555;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
  a{
   text-decoration: none;
   color: #005555;
   transition: all 350ms;
-  :hover{
-    text-decoration: underline;
-  }
  }
 `;
