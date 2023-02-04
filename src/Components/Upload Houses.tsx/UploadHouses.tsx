@@ -2,12 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import logo from "../Assets/M_F HOUSING_free-file1.png";
+import { BiImageAlt } from "react-icons/bi"
 
 const UploadHouses = () => {
   return (
     <div>
       <Container>
-        <First></First>
+        
         <Second></Second>
        <Wrapper>
           <One>
@@ -22,25 +23,24 @@ const UploadHouses = () => {
             </Wrap>
           </One>
           <Two>
-            <Wrap2>
-              <h2>Sign Up</h2>
-              <Form>
-                <Div>
-                    <h4>Name</h4>
-                  <input type="text" placeholder='Enter your name...' />
-                </Div>
-                <Div>
-                    <h4>Email</h4>
-                  <input type="email" placeholder='Enter your email...' />
-                </Div>
-                <Div>
-                    <h4>Password</h4>
-                  <input type="password" placeholder='Enter a strong password...' />
-                </Div>
-              </Form>
-              <Button to = "/login">Sign Up</Button>
-              <P>Already have an account, please login <a href="/login">here</a></P>
-            </Wrap2>
+          <Card>
+                    <Circle>
+                        <BiImageAlt />
+                    </Circle>
+                    <Use id="pix" type={"file"} />
+                    <Button htmlFor= "pix">Upload House Image</Button>
+                    <Input placeholder = "Enter Location" />
+                    <TextArea placeholder = "Description...." />
+                    <Input placeholder = "Enter Agent Name" />
+                    <Select>
+                        <option>Choose Options</option>
+                        <option>Duplex</option>
+                        <option>Rent</option>
+                        <option>Sale</option>
+                        <option>Others</option>
+                    </Select>
+                    <Submit>Upload House</Submit>
+                </Card>
           </Two>
        </Wrapper>
       </Container>
@@ -52,7 +52,7 @@ export default UploadHouses;
 
 const Container = styled.div`
   width: 100%;
-  height: calc(100vh - 70px);
+  padding: 50px 0px 50px 0px;
   display: flex;
   /* background-color: red; */
   display: flex;
@@ -64,15 +64,10 @@ const Container = styled.div`
 const Wrapper = styled.div`
   display: flex;
   width: 80%;
-  height: 70vh;
+  padding: 20px 0px 20px 0px;
   position: absolute;
   right: 30px;
   /* background-color: green; */
-`;
-const First = styled.div`
-  width: 42%;
-  height: calc(100vh - 70px);
-  background-color: #005555;
 `;
 const Second = styled.div`
   width: 58%;
@@ -81,21 +76,21 @@ const Second = styled.div`
 `;
 const One = styled.div`
   width: 30.3%;
-  height: 70vh;
+  height: 80vh;
   background-color: #005555;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 `;
 const Two = styled.div`
   width: 50%;
-  height: 70vh;
-  background-color: white;
+  height: 80vh;
+  /* background-color: yellow; */
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
 `;
 const Wrap = styled.div`
   display: flex;
@@ -116,60 +111,100 @@ const Logo = styled.img`
   height: 100%;
   object-fit: cover;
 `;
-const Wrap2 = styled.div`
-  /* width: 50%; */
-  /* padding: 15px 0px 15px 0px; */
-  /* background-color: red; */
-  h2{
-    text-align: center;
-  }
+const Card = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
 `;
-const Form = styled.div`
-  /* background-color: green; */
-  h4{
-    margin: 0;
-    margin-bottom: 5px;
-  }
-  input{
-    width: 280px;
-    height: 35px;
+const Circle = styled.div`
+    width: 250px;
+    height: 150px;
     border-radius: 5px;
-    outline: #005555;
-    border: 1px solid #005555;
-    padding-left: 20px;
-  }
+    background-color: lavender;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    align-items: center;
+    flex-direction: column;
+
+    ::after{
+        content: "upload file";
+        font-size: 14px;
+        color: rgb(0, 0, 0, 0.6);
+        font-weight: 500;
+    }
 `;
-const Div  = styled.div`
-  /* background-color: orange; */
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+const Button = styled.label`
+    height: 40px;
+    width: 200px;
+    background-color: #005555;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: all 350ms;
+    cursor: pointer;
+    margin-top: 20px;
+    :hover{
+        transform: scale(0.9);
+    }
 `;
-const Button = styled(Link)`
-  width: 300px;
-  height: 50px;
-  border-radius: 5px;
-  background-color: #005555;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: 500;
-  margin-top: 30px;
-  transition: all 350ms;
-  text-decoration: none;
+const Input = styled.input`
+    margin: 10px;
+    width: 300px;
+    border-radius: 3px;
+    outline-color: #f8cbe0;
+    border: 0.7px solid silver;
+    height: 30px;
+
+    ::placeholder{
+        padding-left: 10px;
+    }
 `;
-const P = styled.div`
-  color: #005555;
- a{
-  text-decoration: none;
-  color: #005555;
-  transition: all 350ms;
-  :hover{
-    text-decoration: underline;
-  }
- }
+const TextArea = styled.textarea`
+    margin: 10px;
+    height: 70px;
+    width: 300px;
+    border-radius: 3px;
+    outline-color: #f8cbe0;
+    border: 0.7px solid silver;
+    resize: none;
+    ::placeholder{
+        padding-left: 10px;
+    }
+`;
+const Use = styled.input`
+    display: none;
+`;
+const Select = styled.select`
+    margin: 10px;
+    height: 70px;
+    border-radius: 3px;
+    outline-color: #f8cbe0;
+    border: 0.7px solid silver;
+    resize: none;
+    width: 370px;
+`;
+const Submit = styled.button`
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 350ms;
+    cursor: not-allowed;
+    height: 40px;
+    background-color: #005555;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, 
+                rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
+    @media screen and (max-width: 500px) {
+        width: 120px;
+        font-size: 14px;
+    }
 `;
