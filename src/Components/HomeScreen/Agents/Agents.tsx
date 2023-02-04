@@ -166,7 +166,7 @@ const Img = styled.img`
 const Container = styled.div`
     width: 100%;
     background-color: #80808049;
-    padding: 50px 0px 50px 0px;
+    padding: 50px 0px 20px 0px;
     display: flex;
     justify-content: center;
     align-items: center;

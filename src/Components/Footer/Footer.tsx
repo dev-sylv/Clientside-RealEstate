@@ -3,11 +3,12 @@ import styled from "styled-components";
 import logo from "../Assets/M_F HOUSING_free-file.png";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { AiOutlineInstagram } from "react-icons/ai";
-import {  FiFacebook,FiLinkedin } from "react-icons/fi";
+import {  FiFacebook } from "react-icons/fi";
 import { TfiLinkedin } from "react-icons/tfi";
 import { TbBrandTwitter } from "react-icons/tb";
 import {BiLocationPlus} from "react-icons/bi";
 import {MdEmail} from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -18,9 +19,10 @@ const Footer = () => {
             <p>
               Mercy and Favour real estate <br />
               best real estate deals <br />
-              get your dream house <br />
-              Connect with us on all our social media <br />
-              channels.
+              get your dream house  <br />
+            </p>
+            <p>
+            Connect with us on all our social media
             </p>
             <Icons>
                                 <Circle>
@@ -40,34 +42,34 @@ const Footer = () => {
         <SecondDiv>
           <Box>
                 <h3>SOURCES</h3>
-                <Nav>About us</Nav>
-                <Nav>Services</Nav>
-                <Nav>Mission</Nav>
-                <Nav>Become an agent</Nav>
+                <Nav to="/about-us">About us</Nav>
+                <Nav to="/services">Services</Nav>
+                <Nav to="/about-us">Mission</Nav>
+                <Nav to="/signup">Become an agent</Nav>
           </Box>
 
           <Box>
                 <h3>Support</h3>
-                <Nav>Business</Nav>
-                <Nav>Blog</Nav>
-                <Nav>Creative</Nav>
-                <Nav>Community</Nav>
-                <Nav>Contact Us</Nav>
+                <Nav to="/all-properties">Business</Nav>
+                <Nav to="/all-properties">Blog</Nav>
+                <Nav to="agents">Creative</Nav>
+                <Nav to="/contact-us">Community</Nav>
+                <Nav to="/contact-us">Contact Us</Nav>
           </Box>
 
           <Box>
               <h3>Contact Info</h3>
               <div>
                 <BiLocationPlus />
-                <Nav>No 106 Musuku road Kwabenya, Ghana</Nav>
+                <Nav1>No 106 Musuku road Kwabenya, Ghana</Nav1>
               </div>
               <div>
                 <MdEmail />
-                <Nav>nicsylvia15f@gmail.com</Nav>
+                <Nav1>nicsylvia15f@gmail.com</Nav1>
               </div>
               <div>
                 <BsFillTelephoneFill />
-                <Nav>0541516214</Nav>
+                <Nav1>0541516214</Nav1>
               </div>
           </Box>
 
@@ -77,7 +79,7 @@ const Footer = () => {
         <br />
         <CopyRg>
             <p>
-            Copyright @2022 MF-REAL-ESTATE. All Rights Reserved <span>David Ibekwute</span> 
+            Copyright @2022 MF-REAL-ESTATE. All Rights Reserved <span><a href="https://wa.me/233541516214">David Ibekwute</a></span> 
             </p>
         </CopyRg>
     </Wrapper>
@@ -86,7 +88,12 @@ const Footer = () => {
 }
 
 export default Footer;
-
+const Nav1 = styled.div`
+   padding-bottom: 20px;
+    font-size: 18px;
+    color: rgb(129, 132, 141);
+    transition: all 400ms;
+`;
 const Icons = styled.div`
     display: flex;
     color: white;
@@ -95,20 +102,20 @@ const Circle = styled.div`
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background-color: #16335A;
+    background-color: #074237;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 350ms;
     color: white;
-    border: 3px solid #16335A;
+    border: 3px solid #074237;
     margin: 10px;
     cursor: pointer;
     :hover{
-        border: 2px solid #16335A;
+        border: 2px solid #074237;
         border-color: #16335A;
         background-color: white;
-        color: #16335A;
+        color: #074237;
         margin-top: -1px;
     }
 `;
@@ -116,14 +123,13 @@ const Circle = styled.div`
 const Container = styled.div`
     width : 100%;
     background-color: #EFEFEF;
+    margin: 0;
 `;
 const Wrapper = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 30px;
     flex-wrap: wrap;
-    color:  #301D44;
     font-size: 18px;
 `;
 const FirstDiv = styled.div`
@@ -132,7 +138,7 @@ const FirstDiv = styled.div`
     margin-left: 90px;
 
     p{
-        font-size: 13px;
+        font-size: 18px;
         color: gray;
         line-height: 23px;
     }
@@ -145,29 +151,30 @@ const SecondDiv = styled.div`
 
 `;
 const Logo = styled.img`
-  width: 28%;
-  height: 28%;
+  width: 50%;
+  height: 50%;
   object-fit: contain;
 
 `;
 const Box = styled.div`
+display: flex;
+flex-direction: column;
 div{
   display: flex;
   margin-left: 15px;
 }
 
 `;
-const Nav = styled.div`
+const Nav = styled(Link)`
     padding-bottom: 20px;
-    font-size: 13px;
+    font-size: 18px;
     color: rgb(129, 132, 141);
     transition: all 400ms;
-
+    cursor: pointer;
+    text-decoration: none;
     :hover{
-        color: red; 
-        cursor: pointer;
-        font-size: 11px;
-        transform: scale(0.9);
+       text-decoration: underline;
+        margin-top: -1px;
     }
 `;
 const CopyRg = styled.div`
@@ -181,6 +188,9 @@ const CopyRg = styled.div`
     background-color: #005555;
     margin-top: 70px;
     span{
-      color: grey;
+      a{
+        color: grey;
+        text-decoration: none;
+      }
     }
 `
