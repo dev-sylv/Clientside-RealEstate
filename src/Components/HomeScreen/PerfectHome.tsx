@@ -145,7 +145,7 @@ const Circle = styled.div`
     align-items: center;
     justify-content: center;
     transition: all 350ms;
-    border: 3px solid #8080809b;
+    border: 3px solid #80808024;
     :hover{
         border: 3px solid #005555;
         border-color: #005555;

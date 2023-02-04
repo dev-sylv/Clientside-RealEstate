@@ -1,9 +1,11 @@
 import React from 'react'
 import styled from 'styled-components';
 import hero from "../Assets/hero_bg_3.jpg";
-import { AiFillHome } from "react-icons/ai";
+import { AiFillHome, AiOutlineInstagram } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
-import { GiCheckedShield } from "react-icons/gi";
+import {  FiFacebook,FiLinkedin } from "react-icons/fi";
+import { TfiLinkedin } from "react-icons/tfi";
+import { TbBrandTwitter } from "react-icons/tb";
 import img3 from "../../Assets/img3 (1).png"
 
 const Agents = () => {
@@ -20,8 +22,66 @@ const Agents = () => {
                         <Img src={img3} />
                         <Wrap>
                             <h3>James Doe</h3>
-                            <p>Real Estate Agent</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere  officiis inventore cumque tenetur </p>
+                            <h5>Real Estate Agent</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit. Facere officiis inventore <br /> cumque tenetur laboriosam, minus culp<br /> doloremque odio, neque molestias? </p>
+                            <Icons>
+                                <Circle>
+                                    <TbBrandTwitter />
+                                </Circle>
+                                <Circle>
+                                    <FiFacebook />
+                                </Circle>
+                                <Circle>
+                                    <TfiLinkedin />
+                                </Circle>
+                                <Circle>
+                                    <AiOutlineInstagram />
+                                </Circle>
+                            </Icons>
+                        </Wrap>
+                    </Card>
+                    <Card>
+                        <Img src={img3} />
+                        <Wrap>
+                            <h3>James Doe</h3>
+                            <h5>Real Estate Agent</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit. Facere officiis inventore <br /> cumque tenetur laboriosam, minus culp<br /> doloremque odio, neque molestias? </p>
+                            <Icons>
+                                <Circle>
+                                    <TbBrandTwitter />
+                                </Circle>
+                                <Circle>
+                                    <FiFacebook />
+                                </Circle>
+                                <Circle>
+                                    <TfiLinkedin />
+                                </Circle>
+                                <Circle>
+                                    <AiOutlineInstagram />
+                                </Circle>
+                            </Icons>
+                        </Wrap>
+                    </Card>
+                    <Card>
+                        <Img src={img3} />
+                        <Wrap>
+                            <h3>James Doe</h3>
+                            <h5>Real Estate Agent</h5>
+                            <p>Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit. Facere officiis inventore <br /> cumque tenetur laboriosam, minus culp<br /> doloremque odio, neque molestias? </p>
+                            <Icons>
+                                <Circle>
+                                    <TbBrandTwitter />
+                                </Circle>
+                                <Circle>
+                                    <FiFacebook />
+                                </Circle>
+                                <Circle>
+                                    <TfiLinkedin />
+                                </Circle>
+                                <Circle>
+                                    <AiOutlineInstagram />
+                                </Circle>
+                            </Icons>
                         </Wrap>
                     </Card>
                 </Property>
@@ -33,21 +93,49 @@ const Agents = () => {
 
 export default Agents;
 
+const Icons = styled.div`
+    display: flex;
+    color: white;
+`;
+const Circle = styled.div`
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #16335A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 350ms;
+    color: white;
+    border: 3px solid #16335A;
+    margin: 10px;
+    cursor: pointer;
+    :hover{
+        border: 2px solid #16335A;
+        border-color: #16335A;
+        background-color: white;
+        color: #16335A;
+        margin-top: -1px;
+    }
+`;
+
 const Card = styled.div`
     width: 350px;
-    padding: 30px 0px 30px 0px;
-    background-color: red;
+    padding: 20px 0px 20px 0px;
+    background-color: white;
     border-radius: 5px;
+    color: #16335A;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 `;
 const Wrap = styled.div`
     width: 280px;
-    background-color: yellow;
-    padding: 40px 0px 30px 0px;
+    /* background-color: yellow; */
+    padding: 50px 0px 30px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,9 +143,15 @@ const Wrap = styled.div`
     h3{
         margin: 0;
     }
+    h5{
+        margin: 0;
+        font-weight: 100;
+    }
     p{
-        width: 50px;
-        background-color: orange;
+        /* background-color: black; */
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 280px;
     }
 `;
 const Img = styled.img`
@@ -96,9 +190,10 @@ const Wrapper = styled.div`
 `;
 const Property = styled.div`
     width: 95%;
-    background-color: blue;
+    /* background-color: blue; */
     padding: 50px 0px 50px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 `;

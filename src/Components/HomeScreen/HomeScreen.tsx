@@ -17,7 +17,6 @@ const HomeScreen = () => {
       <PerfectHome />
       <ApplyAgent />
       <Agents />
-
     </div>
   )
 }
