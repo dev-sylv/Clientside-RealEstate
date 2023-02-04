@@ -2,7 +2,7 @@ import React from 'react'
 import AboutText from './AboutText'
 import Gallery from './Gallery'
 import Hero from './Hero'
-import Props from './PerfectCard/Props'
+import Props from './Per/Props'
 
 const AboutUs = () => {
   return (

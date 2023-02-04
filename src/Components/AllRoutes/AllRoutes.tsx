@@ -8,7 +8,7 @@ import Login from '../Auth/Login'
 import SignUp from '../Auth/SignUp'
 import ContactUs from '../ContactUs/ContactUs'
 import HomeScreen from '../HomeScreen/HomeScreen'
-import Services from '../Services/Services'
+import Services from '../Services/Service'
 import UploadHouses from '../Upload Houses.tsx/UploadHouses'
 
 const AllRoutes = () => {

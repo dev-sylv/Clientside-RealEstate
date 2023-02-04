@@ -1,8 +1,13 @@
 import React from 'react'
+import Hero from './Hero'
+import Message from './Message'
 
 const ContactUs = () => {
   return (
-    <div>ContactUs</div>
+    <div>
+      <Hero />
+      <Message />
+    </div>
   )
 }
 
