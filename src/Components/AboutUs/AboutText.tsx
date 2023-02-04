@@ -28,12 +28,12 @@ const AboutText = () => {
                         </p>
                     </Second>
                 </Wrap>
+               
             </Wrapper>
         </Container>
     </div>
   )
 }
-
 export default AboutText;
 
 const Container = styled.div`

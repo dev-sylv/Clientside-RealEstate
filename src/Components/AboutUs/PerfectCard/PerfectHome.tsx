@@ -4,6 +4,7 @@ import hero from "../Assets/hero_bg_3.jpg";
 import { AiFillHome } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { GiCheckedShield } from "react-icons/gi";
+import Props from './Props';
 
 interface perfectcard {
     title1: string,
@@ -12,18 +13,21 @@ interface perfectcard {
     bio2: string,
     title3: string,
     bio3: string,
-    img: string
+    img: string,
+    fd: string,
+    wid: string,
+    wide: string
 }
 
 const PerfectHome: React.FC<perfectcard> = ({
-    title1, bio1, title2, bio2, title3, bio3, img
+    title1, bio1, title2, bio2, title3, bio3, img, fd, wid, wide
 }) => {
   return (
     <div>
         <Container>
             <Wrapper>
-                <Property>
-                    <First>
+                <Property fd={fd}>
+                    <First wid = {wid}>
                         <Div>
                             <Circle>
                                 <AiFillHome />
@@ -52,7 +56,7 @@ const PerfectHome: React.FC<perfectcard> = ({
                             </Text>
                         </Div>
                     </First>
-                    <Second>
+                    <Second wide = {wide}>
                         <img src={img} alt="" />
                     </Second>
                 </Property>
@@ -67,8 +71,8 @@ export default PerfectHome;
 
 const Container = styled.div`
     width: 100%;
-    background-color: #F8F9FA;
-    padding: 50px 0px 50px 0px;
+    background-color:#FFFFFF;;
+    padding: 20px 0px 20px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,16 +94,16 @@ const Wrapper = styled.div`
         text-align: center;
     }
 `;
-const Property = styled.div`
+const Property = styled.div<{fd: string}>`
     width: 95%;
     /* background-color: blue; */
-    padding: 30px 0px 30px 0px;
     display: flex;
+    flex-direction: ${(props) => props.fd};
     justify-content: space-between;
     align-items: center;
 `;
-const First = styled.div`
-    width: 40%;
+const First = styled.div<{wid: string}>`
+    width: ${(props) => props.wid};
     /* background-color: green; */
 `;
 const Div = styled.div`
@@ -135,11 +139,8 @@ const Text = styled.div`
         text-align: left;
     }
 `;
-
-
-
-const Second = styled.div`
-    width: 50%;
+const Second = styled.div<{wide: string}>`
+    width: ${(props) => props.wide};
     img{
         width: 100%;
         height: 100%;
