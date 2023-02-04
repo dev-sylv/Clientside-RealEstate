@@ -5,7 +5,9 @@ import {  AiOutlineInstagram } from "react-icons/ai";
 import {  FiFacebook,FiLinkedin } from "react-icons/fi";
 import { TfiLinkedin } from "react-icons/tfi";
 import { TbBrandTwitter } from "react-icons/tb";
-import img3 from "../../Assets/img3 (1).png"
+import agent1 from "../Assets/agent1.jpg"
+import agent2 from "../Assets/agent1.jpg"
+import agent3 from "../Assets/agent1.jpg"
 
 const AllAgents = () => {
   return (
@@ -18,7 +20,7 @@ const AllAgents = () => {
                 </p>
                 <Property>
                     <Card>
-                        <Img src={img3} />
+                        <Img src={agent1} />
                         <Wrap>
                             <h3>James Doe</h3>
                             <h5>Real Estate Agent</h5>
@@ -40,7 +42,7 @@ const AllAgents = () => {
                         </Wrap>
                     </Card>
                     <Card>
-                        <Img src={img3} />
+                        <Img src={agent2} />
                         <Wrap>
                             <h3>James Doe</h3>
                             <h5>Real Estate Agent</h5>
@@ -62,7 +64,7 @@ const AllAgents = () => {
                         </Wrap>
                     </Card>
                     <Card>
-                        <Img src={img3} />
+                        <Img src={agent3} />
                         <Wrap>
                             <h3>James Doe</h3>
                             <h5>Real Estate Agent</h5>
@@ -157,7 +159,6 @@ const Img = styled.img`
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background-color: transparent;
     position: absolute;
     top: -40px;
 `;
