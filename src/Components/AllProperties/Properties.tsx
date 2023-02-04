@@ -1,8 +1,11 @@
 import React from 'react'
+import Hero from '../AllProperties/Hero'
 
 const Properties = () => {
   return (
-    <div>Properties</div>
+    <div>
+      <Hero />
+    </div>
   )
 }
 
