@@ -15,14 +15,16 @@ const Agents = () => {
                 <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam enim pariatur similique debitis vel nisi qui 
                 </p>
-                {/* <Property>
+                <Property>
                     <Card>
                         <Img src={img3} />
-                        <h3>James Doe</h3>
-                        <p>Real Estate Agent</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere officiis inventore cumque tenetur laboriosam, minus culpa doloremque odio, neque molestias?</p>
+                        <Wrap>
+                            <h3>James Doe</h3>
+                            <p>Real Estate Agent</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere  officiis inventore cumque tenetur </p>
+                        </Wrap>
                     </Card>
-                </Property> */}
+                </Property>
             </Wrapper>
         </Container>
     </div>
@@ -33,13 +35,30 @@ export default Agents;
 
 const Card = styled.div`
     width: 350px;
-    padding: 20px 0px 20px 0px;
+    padding: 30px 0px 30px 0px;
     background-color: red;
+    border-radius: 5px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+`;
+const Wrap = styled.div`
+    width: 280px;
+    background-color: yellow;
+    padding: 40px 0px 30px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h3{
+        margin: 0;
+    }
+    p{
+        width: 50px;
+        background-color: orange;
+    }
 `;
 const Img = styled.img`
     width: 100px;
@@ -78,7 +97,7 @@ const Wrapper = styled.div`
 const Property = styled.div`
     width: 95%;
     background-color: blue;
-    padding: 30px 0px 30px 0px;
+    padding: 50px 0px 50px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
