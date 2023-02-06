@@ -39,7 +39,7 @@ const UploadHouses = () => {
                         <option>Sale</option>
                         <option>Others</option>
                     </Select>
-                    <Submit>Upload House</Submit>
+                    <Submit to="/">Upload House</Submit>
                 </Card>
           </Two>
        </Wrapper>
@@ -188,10 +188,14 @@ const Select = styled.select`
     resize: none;
     width: 370px;
 `;
-const Submit = styled.button`
+const Submit = styled(Link)`
+text-decoration: none;
     width: 150px;
     border: none;
     border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
     text-transform: capitalize;
     font-size: 18px;

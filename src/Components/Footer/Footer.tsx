@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import logo from "../Assets/M_F HOUSING_free-file.png";
-import { BsFillTelephoneFill } from "react-icons/bs";
+import { BsFillTelephoneFill, BsArrowUpSquare, BsBoxArrowDown}  from "react-icons/bs";
 import { AiOutlineInstagram } from "react-icons/ai";
 import {  FiFacebook } from "react-icons/fi";
 import { TfiLinkedin } from "react-icons/tfi";
@@ -82,12 +82,17 @@ const Footer = () => {
             Copyright @2022 MF-REAL-ESTATE. All Rights Reserved <span><a href="https://wa.me/233541516214">David Ibekwute</a></span> 
             </p>
         </CopyRg>
+        <ArrowToTop>
+          <BsArrowUpSquare />
+        </ArrowToTop>
     </Wrapper>
 </Container>
   )
 }
 
 export default Footer;
+
+const ArrowToTop = styled.div``;
 const Nav1 = styled.div`
    padding-bottom: 20px;
     font-size: 18px;
