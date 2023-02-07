@@ -1,10 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import logo from "../Assets/M_F HOUSING_free-file1.png";
+import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai"
 
 
 const SignUp = () => {
+
+  // States for passsword icon:
+  const [showEye, setShowEye] = useState(true);
+
+  const showPassword = () =>{
+    setShowEye(!showEye)
+  }
+  
+  // states for signup:
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+
   return (
     <div>
       <Container>
@@ -28,16 +42,44 @@ const SignUp = () => {
               <Form>
                 <Div>
                     <h4>Name</h4>
-                  <input type="text" placeholder='Enter your name...' />
+                  <input type="text"
+                  value={name}
+                  onChange = {
+                    ((e) =>{
+                      setName(e.target.value)
+                    })
+                  }
+                  required
+                   placeholder='Enter your name...' />
                 </Div>
                 <Div>
                     <h4>Email</h4>
-                  <input type="email" placeholder='Enter your email...' />
+                  <input type="email"
+                  onChange={((e) =>{
+                    setEmail(e.target.value)
+                  })}
+                  required
+                  placeholder='Enter your email...' />
                 </Div>
-                <Div>
+                {
+                  showEye ? (
+                    <Div>
                     <h4>Password</h4>
-                  <input type="password" placeholder='Enter a strong password...' />
+                    <div>
+                    <input type="password" placeholder='Enter a strong password...' />
+                      <AiFillEyeInvisible onClick={showPassword} />
+                    </div>
                 </Div>
+                  ) : (
+                    <Div>
+                    <h4>Password</h4>
+                    <div>
+                    <input type="text" placeholder='Enter a strong password...' />
+                    <AiFillEye onClick={showPassword} />
+                    </div>
+                </Div>
+                  )
+                }
               </Form>
               <Button to = "/login">Sign Up</Button>
               <P>Already have an account, please login <a href="/login">here</a></P>
@@ -146,6 +188,9 @@ const Div  = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  div{
+    cursor: pointer;
+  }
 `;
 const Button = styled(Link)`
   width: 300px;
