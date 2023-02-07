@@ -79,56 +79,37 @@ const Footer = () => {
         <br />
         <CopyRg>
             <p>
-            Copyright @2022 MF-REAL-ESTATE. All Rights Reserved <span><a href="https://wa.me/233541516214">David Ibekwute</a></span> 
+            Copyright @2023 MF-REAL-ESTATE. All Rights Reserved <span><a href="https://wa.me/233541516214">David Ibekwute</a></span> 
             </p>
         </CopyRg>
-        <ArrowToTop>
+        
+    </Wrapper>
+    <ArrowToTop to="Hero">
           <BsArrowUpSquare />
         </ArrowToTop>
-    </Wrapper>
 </Container>
   )
 }
 
 export default Footer;
 
-const ArrowToTop = styled.div``;
-const Nav1 = styled.div`
-   padding-bottom: 20px;
-    font-size: 18px;
-    color: rgb(129, 132, 141);
-    transition: all 400ms;
-`;
-const Icons = styled.div`
-    display: flex;
-    color: white;
-`;
-const Circle = styled.div`
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #074237;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 350ms;
-    color: white;
-    border: 3px solid #074237;
-    margin: 10px;
-    cursor: pointer;
-    :hover{
-        border: 2px solid #074237;
-        border-color: #16335A;
-        background-color: white;
-        color: #074237;
-        margin-top: -1px;
-    }
+const ArrowToTop = styled(Link)`
+  position: fixed;
+  right: 30px;
+  font-size: 35px;
+  cursor: pointer;
+  color: #005555;
+  transition: all 350ms;
+  :hover{
+    margin-top: -5px;
+  }
 `;
 
 const Container = styled.div`
     width : 100%;
     background-color: #EFEFEF;
     margin: 0;
+    position: relative;
 `;
 const Wrapper = styled.div`
     display: flex;
@@ -199,3 +180,34 @@ const CopyRg = styled.div`
       }
     }
 `
+const Nav1 = styled.div`
+   padding-bottom: 20px;
+    font-size: 18px;
+    color: rgb(129, 132, 141);
+    transition: all 400ms;
+`;
+const Icons = styled.div`
+    display: flex;
+    color: white;
+`;
+const Circle = styled.div`
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #074237;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 350ms;
+    color: white;
+    border: 3px solid #074237;
+    margin: 10px;
+    cursor: pointer;
+    :hover{
+        border: 2px solid #074237;
+        border-color: #16335A;
+        background-color: white;
+        color: #074237;
+        margin-top: -1px;
+    }
+`;

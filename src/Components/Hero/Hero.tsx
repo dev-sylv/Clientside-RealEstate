@@ -23,7 +23,7 @@ const Hero = () => {
  
   return (
     <div>
-        <Container>
+        <Container id='Hero'>
         <Maintext>
             <h3>The Simplest <br /> Way to Find Property</h3>
             <p>Search For Your Dream House - Easiest way to find your dream home </p>
