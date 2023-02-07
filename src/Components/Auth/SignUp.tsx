@@ -1,11 +1,20 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import logo from "../Assets/M_F HOUSING_free-file1.png";
-import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai"
+import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
+import axios from "axios";
+import { CurrentUser } from '../GlobalContext/Globalprops';
 
+
+// API LINK => https://sylvia-realestate-api.onrender.com
 
 const SignUp = () => {
+
+  const navigate = useNavigate();
+
+  // Global context for currentusers:
+  const RegisterContext = useContext(CurrentUser)
 
   // States for passsword icon:
   const [showEye, setShowEye] = useState(true);
@@ -17,7 +26,18 @@ const SignUp = () => {
   // states for signup:
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
+  const [password, setPassword] = useState("");
+
+  // Consuming Api for agent sign up/register:
+  const RegisterAgents = async(e: any) =>{
+    e.preventDefault();
+    await axios.post("https://sylvia-realestate-api.onrender.com/registeragents", {
+      name, email, password
+    }).then((res) =>{
+      RegisterContext?.setUserData(res.data.data)
+      navigate("/login")
+    })
+  }
 
   return (
     <div>
@@ -39,7 +59,7 @@ const SignUp = () => {
           <Two>
             <Wrap2>
               <h2>Sign Up</h2>
-              <Form>
+              <Form onSubmit={RegisterAgents}>
                 <Div>
                     <h4>Name</h4>
                   <input type="text"
@@ -65,23 +85,33 @@ const SignUp = () => {
                   showEye ? (
                     <Div>
                     <h4>Password</h4>
-                    <div>
-                    <input type="password" placeholder='Enter a strong password...' />
+                    <input type="password"
+                    required
+                    onChange={((e) =>{
+                      setPassword(e.target.value)
+                    })}
+                     placeholder='Enter a strong password...' />
+                     <div>
                       <AiFillEyeInvisible onClick={showPassword} />
                     </div>
                 </Div>
                   ) : (
                     <Div>
                     <h4>Password</h4>
+                    <input type="text"
+                     required
+                     onChange={((e) =>{
+                       setPassword(e.target.value)
+                     })}
+                    placeholder='Enter a strong password...' />
                     <div>
-                    <input type="text" placeholder='Enter a strong password...' />
                     <AiFillEye onClick={showPassword} />
                     </div>
                 </Div>
                   )
                 }
               </Form>
-              <Button to = "/login">Sign Up</Button>
+              <Button type = "submit">Sign Up</Button>
               <P>Already have an account, please login <a href="/login">here</a></P>
             </Wrap2>
           </Two>
@@ -167,7 +197,7 @@ const Wrap2 = styled.div`
     text-align: center;
   }
 `;
-const Form = styled.div`
+const Form = styled.form`
   /* background-color: green; */
   h4{
     margin: 0;
@@ -188,11 +218,16 @@ const Div  = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  position: relative;
   div{
     cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
   }
 `;
-const Button = styled(Link)`
+const Button = styled.button`
   width: 300px;
   height: 50px;
   border-radius: 5px;
@@ -206,7 +241,6 @@ const Button = styled(Link)`
   font-weight: 500;
   margin-top: 30px;
   transition: all 350ms;
-  text-decoration: none;
 `;
 const P = styled.div`
   color: #005555;
