@@ -95,8 +95,8 @@ const Property = () => {
                     </div>
                 </Slider>
                 <Properties>
-                    <Movement>Prev</Movement>
-                    <Movement>Next</Movement>
+                    {/* <Movement>Prev</Movement>
+                    <Movement>Next</Movement> */}
                 </Properties>
             </Wrapper>
         </Container>
@@ -116,7 +116,9 @@ const Container = styled.div`
 `;
 const Wrapper = styled.div`
     width: 95%;
-    /* background-color: green; */
+    background-color: green;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
 `;
 const Properties = styled.div`
     display: flex;

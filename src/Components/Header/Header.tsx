@@ -49,7 +49,7 @@ const Header = () => {
                         <Button to="/signup" width='70px'>Sign Up</Button>
                         <Button to="/login" width='120px'>Upload Houses</Button>
                         <Profile> 
-                               {user!.userData!.name.charAt(0).toUpperCase()}
+                               {/* {user!.userData!.name.charAt(0).toUpperCase()} */}
                         </Profile>
                     </Second>
                 </Navigation>
@@ -111,8 +111,8 @@ const MinimizedNav = styled.div`
     position: absolute;
     left: 0;
     z-index: 20;
-    @media screen and (min-width: 0px) and (max-width: 768px){
-        display: block;
+    @media screen and (max-width: 768px){
+        display: none;
     }
 `;
 const Wrap = styled.div`

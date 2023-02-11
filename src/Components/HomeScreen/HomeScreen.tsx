@@ -12,11 +12,11 @@ const HomeScreen = () => {
     <div>
       <Hero />
       <Property />
-      <Services />
-      <WhiteComp />
-      <PerfectHome />
-      <ApplyAgent />
-      <Agents />
+      {/* <Services /> */}
+      {/* <WhiteComp /> */}
+      {/* <PerfectHome /> */}
+      {/* <ApplyAgent /> */}
+      {/* <Agents /> */}
     </div>
   )
 }
