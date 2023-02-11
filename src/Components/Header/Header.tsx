@@ -44,10 +44,9 @@ const Header = () => {
                     </First>
                     <Second>
                         <Button to="/signup" width='70px'>Sign Up</Button>
-                        <Button to="login" width='70px'>Login</Button>
-                        <Button to="/signup" width='120px'>Upload Houses</Button>
+                        <Button to="/login" width='120px'>Upload Houses</Button>
                         <Profile> 
-                            CS    
+                               
                         </Profile>
                     </Second>
                 </Navigation>
@@ -90,8 +89,8 @@ const Profile = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background-color: transparent;
     color: white;
     border-radius: 50px;
@@ -186,7 +185,7 @@ const Nav = styled(Link)`
     }
 `;
 const Second = styled.div`
-    width: 350px;
+    width: 280px;
     /* background-color: blue; */
     display: flex;
     justify-content: space-around;

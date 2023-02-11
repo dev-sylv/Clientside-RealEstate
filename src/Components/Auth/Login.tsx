@@ -43,7 +43,7 @@ const Login = () => {
           </One>
           <Two>
             <Wrap2 onSubmit={AgentLogin}>
-              <h2>Sign Up</h2>
+              <h2>Sign In</h2>
               <Form>
                 <Div>
                     <h4>Email</h4>

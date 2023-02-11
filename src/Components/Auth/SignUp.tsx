@@ -27,13 +27,14 @@ const SignUp = () => {
   // states for signup:
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
+  const [bio, setBio] = useState("")
   const [password, setPassword] = useState("");
 
   // Consuming Api for agent sign up/register:
   const RegisterAgents = async(e: any) =>{
     e.preventDefault();
     await axios.post("https://sylvia-realestate-api.onrender.com/registeragents", {
-      name, email, password
+      name, email, bio, password
     }).then((res) =>{
       RegisterContext?.setUserData(res.data.data)
       navigate("/login")
@@ -43,8 +44,8 @@ const SignUp = () => {
   return (
     <div>
       <Container>
-        <First></First>
-        <Second></Second>
+        {/* <First></First>
+        <Second></Second> */}
        <Wrapper>
           <One>
             <Wrap>
@@ -86,6 +87,15 @@ const SignUp = () => {
                   })}
                   required
                   placeholder='Enter your email...' />
+                </Div>
+                <Div>
+                    <h4>Bio</h4>
+                  <input type="email"
+                  onChange={((e) =>{
+                    setEmail(e.target.value)
+                  })}
+                  required
+                  placeholder='Enter a brief bio ...' />
                 </Div>
                 {
                   showEye ? (
@@ -172,36 +182,43 @@ const ImgButton = styled.label`
 
 const Container = styled.div`
   width: 100%;
-  height: calc(100vh - 70px);
+  padding: 20px 0px 20px 0px;
+  /* height: calc(100vh - 70px); */
   display: flex;
-  /* background-color: red; */
+  background-color: #005555;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  /* position: relative; */
   color: #005555;
 `;
 const Wrapper = styled.div`
   display: flex;
+  /* align-items: center;
+  justify-content: center; */
   width: 80%;
-  height: 70vh;
-  position: absolute;
-  right: 30px;
+  padding: 20px 0px 20px 0px;
+  /* height: 70vh; */
+  /* position: absolute; */
+  /* right: 30px; */
   /* background-color: green; */
 `;
-const First = styled.div`
-  width: 42%;
-  height: calc(100vh - 70px);
-  background-color: #005555;
-`;
-const Second = styled.div`
-  width: 58%;
-  height: calc(100vh - 70px);
-  background-color: white;
-`;
+// const First = styled.div`
+//   width: 42%;
+//   padding: 20px 0px 20px 0px;
+//   /* height: calc(100vh - 70px); */
+//   background-color: #005555;
+// `;
+// const Second = styled.div`
+//   width: 58%;
+//   padding: 20px 0px 20px 0px;
+//   /* height: calc(100vh - 70px); */
+//   background-color: white;
+// `;
 const One = styled.div`
   width: 30.3%;
-  height: 95vh;
+  padding: 20px 0px 20px 0px;
+  /* height: 95vh; */
   background-color: #005555;
   display: flex;
   align-items: center;
@@ -210,8 +227,9 @@ const One = styled.div`
 `;
 const Two = styled.div`
   width: 50%;
-  height: 100vh;
-  /* background-color: blue; */
+  /* height: 100vh; */
+  padding: 20px 0px 20px 0px;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -238,9 +256,9 @@ const Logo = styled.img`
 `;
 const Wrap2 = styled.div`
   /* width: 50%; */
-  /* padding: 15px 0px 15px 0px; */
+  padding: 15px 0px 15px 0px;
   /* background-color: red; */
-  height: 100vh;
+  /* height: 100vh; */
   h2{
     text-align: center;
   }
