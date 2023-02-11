@@ -13,9 +13,10 @@ const Login = () => {
 
   const [email, setEmail] = useState("");
 
+  // https://sylvia-realestate-api.onrender.com/loginagent
   const AgentLogin = async(e: any) =>{
     e.preventDefault();
-    await axios.post("https://sylvia-realestate-api.onrender.com/loginagent", {
+    await axios.post("http://localhost:2080/api/agents/loginagent", {
       email
     }).then((res) =>{
       LoginContext?.setUserData(res.data.data)

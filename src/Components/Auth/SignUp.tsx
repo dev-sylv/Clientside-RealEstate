@@ -31,12 +31,15 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
 
   // Consuming Api for agent sign up/register:
+  // https://sylvia-realestate-api.onrender.com/registeragents
   const RegisterAgents = async(e: any) =>{
     e.preventDefault();
-    await axios.post("https://sylvia-realestate-api.onrender.com/registeragents", {
+    await axios.post("http://localhost:2080/api/agents/registeragents", {
       name, email, bio, password
     }).then((res) =>{
+      console.log(res.data.data)
       RegisterContext?.setUserData(res.data.data)
+      console.log("Sign up is working")
       navigate("/login")
     })
   }
@@ -59,15 +62,17 @@ const SignUp = () => {
             </Wrap>
           </One>
           <Two>
-            <Wrap2>
+            <Wrap2  onSubmit={RegisterAgents}>
               <h2>Sign Up</h2>
-              <Form onSubmit={RegisterAgents}>
-                  <Circle>
+              <Form>
+
+                  {/* <Circle>
                             <BiImageAlt />
-                        </Circle>
+                  </Circle>
                   <Use id="pix" type={"file"} />
-                        <ImgButton htmlFor= "pix">Upload Your Image</ImgButton>
-                <Div>
+                  <ImgButton htmlFor= "pix">Upload Your Image</ImgButton> */}
+
+                 <Div>
                     <h4>Name</h4>
                   <input type="text"
                   value={name}
@@ -79,6 +84,7 @@ const SignUp = () => {
                   required
                    placeholder='Enter your name...' />
                 </Div>
+
                 <Div>
                     <h4>Email</h4>
                   <input type="email"
@@ -88,15 +94,17 @@ const SignUp = () => {
                   required
                   placeholder='Enter your email...' />
                 </Div>
+
                 <Div>
                     <h4>Bio</h4>
-                  <input type="email"
+                  <input type="text"
                   onChange={((e) =>{
-                    setEmail(e.target.value)
+                    setBio(e.target.value)
                   })}
                   required
                   placeholder='Enter a brief bio ...' />
                 </Div>
+
                 {
                   showEye ? (
                     <Div>
@@ -254,7 +262,7 @@ const Logo = styled.img`
   height: 100%;
   object-fit: cover;
 `;
-const Wrap2 = styled.div`
+const Wrap2 = styled.form`
   /* width: 50%; */
   padding: 15px 0px 15px 0px;
   /* background-color: red; */
@@ -263,7 +271,7 @@ const Wrap2 = styled.div`
     text-align: center;
   }
 `;
-const Form = styled.form`
+const Form = styled.div`
   /* background-color: green; */
   h4{
     margin: 0;
