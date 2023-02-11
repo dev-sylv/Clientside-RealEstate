@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import styled from 'styled-components';
 import logo from "../Assets/M_F HOUSING_free-file1.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdCancelPresentation } from "react-icons/md"
 import { Link } from 'react-router-dom';
+import { CurrentUser } from '../GlobalContext/Globalprops';
 
 const Header = () => {
+
+    const user  = useContext(CurrentUser);
 
     // For the hamburger and cancel icon
     const [show, setShow] = useState(true);
@@ -46,7 +49,7 @@ const Header = () => {
                         <Button to="/signup" width='70px'>Sign Up</Button>
                         <Button to="/login" width='120px'>Upload Houses</Button>
                         <Profile> 
-                               
+                               {user!.userData!.name.charAt(0).toUpperCase()}
                         </Profile>
                     </Second>
                 </Navigation>

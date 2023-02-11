@@ -19,7 +19,9 @@ const Login = () => {
     await axios.post("http://localhost:2080/api/agents/loginagent", {
       email
     }).then((res) =>{
+      console.log(res.data.data)
       LoginContext?.setUserData(res.data.data)
+      console.log("Login now working")
       navigate("/upload-house")
     })
   }
