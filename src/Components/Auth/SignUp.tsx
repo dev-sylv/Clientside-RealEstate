@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import logo from "../Assets/M_F HOUSING_free-file1.png";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
+import { BiImageAlt } from "react-icons/bi";
 import axios from "axios";
 import { CurrentUser } from '../GlobalContext/Globalprops';
 
@@ -60,6 +61,11 @@ const SignUp = () => {
             <Wrap2>
               <h2>Sign Up</h2>
               <Form onSubmit={RegisterAgents}>
+                  <Circle>
+                            <BiImageAlt />
+                        </Circle>
+                  <Use id="pix" type={"file"} />
+                        <ImgButton htmlFor= "pix">Upload Your Image</ImgButton>
                 <Div>
                     <h4>Name</h4>
                   <input type="text"
@@ -123,6 +129,47 @@ const SignUp = () => {
 
 export default SignUp;
 
+
+const Circle = styled.div`
+    width: 250px;
+    height: 150px;
+    border-radius: 5px;
+    background-color: lavender;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    align-items: center;
+    flex-direction: column;
+
+    ::after{
+        content: "upload file";
+        font-size: 14px;
+        color: rgb(0, 0, 0, 0.6);
+        font-weight: 500;
+    }
+`;
+
+const Use = styled.input`
+    display: none;
+`;
+
+const ImgButton = styled.label`
+    height: 40px;
+    width: 200px;
+    background-color: #005555;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: all 350ms;
+    cursor: pointer;
+    margin-top: 20px;
+    :hover{
+        transform: scale(0.9);
+    }
+`;
+
 const Container = styled.div`
   width: 100%;
   height: calc(100vh - 70px);
@@ -154,7 +201,7 @@ const Second = styled.div`
 `;
 const One = styled.div`
   width: 30.3%;
-  height: 70vh;
+  height: 95vh;
   background-color: #005555;
   display: flex;
   align-items: center;
@@ -163,8 +210,8 @@ const One = styled.div`
 `;
 const Two = styled.div`
   width: 50%;
-  height: 70vh;
-  background-color: white;
+  height: 100vh;
+  /* background-color: blue; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -193,6 +240,7 @@ const Wrap2 = styled.div`
   /* width: 50%; */
   /* padding: 15px 0px 15px 0px; */
   /* background-color: red; */
+  height: 100vh;
   h2{
     text-align: center;
   }

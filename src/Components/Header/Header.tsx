@@ -46,6 +46,9 @@ const Header = () => {
                         <Button to="/signup" width='70px'>Sign Up</Button>
                         <Button to="login" width='70px'>Login</Button>
                         <Button to="/signup" width='120px'>Upload Houses</Button>
+                        <Profile> 
+                            CS    
+                        </Profile>
                     </Second>
                 </Navigation>
 
@@ -82,6 +85,20 @@ const Header = () => {
 }
 
 export default Header;
+
+const Profile = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    color: white;
+    border-radius: 50px;
+    border: 1px solid white;
+    font-size: 15px;
+`;
+
 
 const MinimizedNav = styled.div`
     width: 100%;
@@ -169,7 +186,7 @@ const Nav = styled(Link)`
     }
 `;
 const Second = styled.div`
-    width: 300px;
+    width: 350px;
     /* background-color: blue; */
     display: flex;
     justify-content: space-around;

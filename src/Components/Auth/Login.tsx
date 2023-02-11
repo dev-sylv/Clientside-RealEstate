@@ -1,9 +1,29 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import axios from 'axios';
+import React, {useState, useContext} from 'react'
+import { Link, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import logo from "../Assets/M_F HOUSING_free-file1.png";
+import { CurrentUser } from '../GlobalContext/Globalprops';
 
 const Login = () => {
+
+  const navigate = useNavigate();
+
+  const LoginContext = useContext(CurrentUser)
+
+  const [email, setEmail] = useState("");
+
+  const AgentLogin = async(e: any) =>{
+    e.preventDefault();
+    await axios.post("https://sylvia-realestate-api.onrender.com/loginagent", {
+      email
+    }).then((res) =>{
+      LoginContext?.setUserData(res.data.data)
+      navigate("/upload-house")
+    })
+  }
+
+
   return (
     <div>
       <Container>
@@ -22,19 +42,24 @@ const Login = () => {
             </Wrap>
           </One>
           <Two>
-            <Wrap2>
+            <Wrap2 onSubmit={AgentLogin}>
               <h2>Sign Up</h2>
               <Form>
                 <Div>
                     <h4>Email</h4>
-                  <input type="email" placeholder='Login with your email...' />
+                  <input type="email"
+                  required
+                  onChange={((e) =>{
+                    setEmail(e.target.value)
+                  })}
+                  placeholder='Login with your email...' />
                 </Div>
-                <Div>
+                {/* <Div>
                     <h4>Password</h4>
                   <input type="password" placeholder='Enter your password...' />
-                </Div>
+                </Div> */}
               </Form>
-              <Button to = "/upload-house">Sign In</Button>
+              <Button type = "submit">Sign In</Button>
               <P>Don't have an account, please register <a href="/signup">here</a></P>
             </Wrap2>
           </Two>
@@ -112,7 +137,7 @@ const Logo = styled.img`
   height: 100%;
   object-fit: cover;
 `;
-const Wrap2 = styled.div`
+const Wrap2 = styled.form`
   /* width: 50%; */
   /* padding: 15px 0px 15px 0px; */
   /* background-color: red; */
@@ -142,9 +167,10 @@ const Div  = styled.div`
   justify-content: space-between;
   flex-direction: column;
 `;
-const Button = styled(Link)`
+const Button = styled.button`
   width: 300px;
   height: 50px;
+  outline: gray;
   border-radius: 5px;
   background-color: #005555;
   color: white;

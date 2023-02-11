@@ -44,7 +44,7 @@ const HouseCard: React.FC<house> = (
                         {baths} baths
                     </Baths>
                 </Rooms>
-                <Button to="/property-details">See Details</Button>
+                <Button to="/all-properties/property-details">See Details</Button>
                 </Wrapper>
             </HouseDescription>
         </Card>

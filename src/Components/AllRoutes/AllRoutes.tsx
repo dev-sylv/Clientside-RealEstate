@@ -7,6 +7,7 @@ import Login from '../Auth/Login'
 import SignUp from '../Auth/SignUp'
 import ContactUs from '../ContactUs/ContactUs'
 import HomeScreen from '../HomeScreen/HomeScreen'
+import PageNotFound from '../PageNotFound'
 import Services from '../Services/Service'
 import SingleProperty from '../SingleProperty/SingleProperty'
 import UploadHouses from '../Upload Houses.tsx/UploadHouses'
@@ -40,11 +41,17 @@ const AllRoutes = () => {
         },
         {
             path: "/all-properties",
-            element: <Properties />
-        },
-        {
-            path : "/property-details",
-            element: <SingleProperty />
+
+            children:[
+                {
+                    index: true,
+                    element: <Properties />
+                },
+                {
+                    path: "/all-properties/property-details",
+                    element: <SingleProperty />
+                }
+            ]
         },
         {
             path: "/upload-house",
@@ -53,6 +60,10 @@ const AllRoutes = () => {
         {
             path: "/agents",
             element: <Agents />
+        },
+        {
+            path: "*",
+            element: <PageNotFound />
         }
     ])
 
