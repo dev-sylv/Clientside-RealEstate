@@ -42,10 +42,12 @@ const Property = () => {
               }
             },
             {
-              breakpoint: 480,
+              breakpoint: 500,
               settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
               }
             }
           ]
@@ -121,10 +123,6 @@ const Property = () => {
                          />
                     </div>
                 </Slider>
-                <Properties>
-                    {/* <Movement>Prev</Movement>
-                    <Movement>Next</Movement> */}
-                </Properties>
             </Wrapper>
         </Container>
     </div>
@@ -140,13 +138,13 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 `;
 const Wrapper = styled.div`
     width: 95%;
     /* background-color: green; */
     display: flex;
     flex-direction: column;
-    /* flex-wrap: wrap; */
 `;
 const Properties = styled.div`
     display: flex;
@@ -156,6 +154,7 @@ const Properties = styled.div`
     color: #005555;
     font-size: 30px;
     font-weight: bold;
+    background-color: blue;
     flex-wrap: wrap;
 `;
 const Button = styled(Link)`

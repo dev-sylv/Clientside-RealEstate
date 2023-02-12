@@ -12,7 +12,7 @@ const HomeScreen = () => {
     <div>
       <Hero />
       <Property />
-      {/* <Services /> */}
+      <Services />
       {/* <WhiteComp /> */}
       {/* <PerfectHome /> */}
       {/* <ApplyAgent /> */}

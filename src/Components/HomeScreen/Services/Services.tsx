@@ -45,6 +45,7 @@ export default Services;
 
 const Container = styled.div`
     background-color: #F2F4F6;
+    /* background-color: red; */
     width: 100%;
     padding: 20px 0px 20px 0px;
     display: flex;
@@ -52,7 +53,7 @@ const Container = styled.div`
     justify-content: center;
 `;
 const Wrapper = styled.div`
-    /* background-color: red; */
+    /* background-color: blue; */
     width: 95%;
     display: flex;
     flex-wrap: wrap;
