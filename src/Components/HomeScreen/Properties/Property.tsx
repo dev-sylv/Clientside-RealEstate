@@ -18,10 +18,37 @@ const Property = () => {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
         cssEase: "ease-in-out",
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
       };
 
   return (
@@ -116,8 +143,9 @@ const Container = styled.div`
 `;
 const Wrapper = styled.div`
     width: 95%;
-    background-color: green;
-    /* display: flex; */
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
     /* flex-wrap: wrap; */
 `;
 const Properties = styled.div`
@@ -128,24 +156,7 @@ const Properties = styled.div`
     color: #005555;
     font-size: 30px;
     font-weight: bold;
-`;
-const Movement = styled.div`
-    width: 75px;
-    height: 35px;
-    background-color: #DADFE5;
-    font-size: 15px;
-    border-radius: 30px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #005555;
-    cursor: pointer;
-    transition: all 350ms;
-    :hover{
-        background-color: #005555;
-        color: #DADFE5;
-    }
+    flex-wrap: wrap;
 `;
 const Button = styled(Link)`
 text-decoration: none;

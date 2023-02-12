@@ -55,7 +55,7 @@ const HouseCard: React.FC<house> = (
 export default HouseCard;
 
 const Card = styled.div`
-    width: 350px;
+    width: 280px;
     height: 500px;
     margin: 20px;
 `;
