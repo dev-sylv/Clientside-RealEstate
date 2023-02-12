@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import logo from "../Assets/M_F HOUSING_free-file1.png";
 import { CurrentUser } from '../GlobalContext/Globalprops';
-import swal from "sweetalert2";
+import Swal from 'sweetalert2';
 
 const Login = () => {
 
@@ -20,11 +20,23 @@ const Login = () => {
     await axios.post("http://localhost:2080/api/agents/loginagent", {
       email
     }).then((res) =>{
+      LoginContext?.setUserData(res.data.data);
       console.log(res.data.data)
-      LoginContext?.setUserData(res.data.data)
+      Swal.fire({
+        icon: "success",
+        text: res!.data!.message,
+        title: "Login successful",
+        timer: 5000
+      })
       console.log("Login now working")
       navigate("/upload-house")
       window.location.reload();
+    }).catch((res) =>{
+      Swal.fire({
+        icon: "error",
+        timer: 5000,
+        title: "Couldn't login user"
+      })
     })
   }
 
