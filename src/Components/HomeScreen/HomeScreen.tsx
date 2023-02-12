@@ -14,9 +14,9 @@ const HomeScreen = () => {
       <Property />
       <Services />
       <WhiteComp />
-      {/* <PerfectHome /> */}
-      {/* <ApplyAgent /> */}
-      {/* <Agents /> */}
+      <PerfectHome />
+      <ApplyAgent />
+      <Agents />
     </div>
   )
 }

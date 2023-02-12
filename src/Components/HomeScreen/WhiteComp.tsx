@@ -19,15 +19,21 @@ export default WhiteComp;
 const Container = styled.div`
     width: 100%;
     padding: 20px 0px 20px 0px;
-    background-color: white;
+    /* background-color: red; */
     display: flex;
     justify-content: center;
     align-items: center;
     color: #005555;;
 `;
 const Wrapper = styled.div`
+    display: flex;
+    width: 90%;
+    text-align: center;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
     p{
-        text-align: center;
         font-weight: bold;
     }
 `;

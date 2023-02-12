@@ -83,6 +83,7 @@ const Agent = styled.div`
     justify-content: space-between;
     color: #005555;
     text-align: center;
+    flex-wrap: wrap;
 `;
 const Num = styled.div`
     font-size: 40px;
@@ -106,6 +107,7 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     color: #005555;
     h1{
@@ -124,10 +126,21 @@ const Property = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+   @media screen and (max-width: 768px) {
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+   }
 `;
 const First = styled.div`
-    width: 40%;
-    /* background-color: green; */
+    width: 50%;
+    background-color: green;
+    @media screen and (max-width: 768px) {
+    width: 90%;
+   }
+    @media screen and (max-width: 425px) {
+    width: 60%;
+   }
 `;
 const Div = styled.div`
     /* background-color: pink; */
@@ -162,9 +175,6 @@ const Text = styled.div`
         text-align: left;
     }
 `;
-
-
-
 const Second = styled.div`
     width: 50%;
     img{
@@ -172,4 +182,7 @@ const Second = styled.div`
         height: 100%;
         object-fit: cover;
     }
+    @media screen and (max-width: 768px) {
+    width: 90%;
+   }
 `;

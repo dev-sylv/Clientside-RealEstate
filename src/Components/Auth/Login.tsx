@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import logo from "../Assets/M_F HOUSING_free-file1.png";
 import { CurrentUser } from '../GlobalContext/Globalprops';
+import swal from "sweetalert2";
 
 const Login = () => {
 
@@ -23,6 +24,7 @@ const Login = () => {
       LoginContext?.setUserData(res.data.data)
       console.log("Login now working")
       navigate("/upload-house")
+      window.location.reload();
     })
   }
 
