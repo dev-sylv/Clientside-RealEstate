@@ -22,7 +22,7 @@ const PerfectHome = () => {
                             </Circle>
                             <Text>
                                 <h3>2M Properties</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit. Nostrum iste.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur  adipisicing elit. Nostrum iste.</p>
                             </Text>
                         </Div>
                         <Div>
@@ -31,7 +31,7 @@ const PerfectHome = () => {
                             </Circle>
                             <Text>
                                 <h3>Top Rated Agents</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit. Nostrum iste.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur  adipisicing elit. Nostrum iste.</p>
                             </Text>
                         </Div>
                         <Div>
@@ -40,7 +40,7 @@ const PerfectHome = () => {
                             </Circle>
                             <Text>
                                 <h3>Legit Properties</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit. Nostrum iste.</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum iste.</p>
                             </Text>
                         </Div>
                     </First>
@@ -88,70 +88,100 @@ const Agent = styled.div`
 const Num = styled.div`
     font-size: 40px;
     font-weight: bold;
+    @media screen and (max-width: 425px) {
+        font-size: 30px;
+    }
+    @media screen and (max-width: 320px) {
+        font-size: 27px;
+    }
 `;
 const Award = styled.div`
     font-weight: 300;
+    @media screen and (max-width: 425px) {
+        margin-bottom: 15px;
+    }
 `;
 
 const Container = styled.div`
     width: 100%;
-    background-color: #F8F9FA;
+    /* background-color: red; */
+    /* height: 40px; */
     padding: 50px 0px 50px 0px;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 `;
 const Wrapper = styled.div`
     width: 95%;
-    /* background-color: red; */
+    /* background-color: blue; */
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
+    flex-direction: column;
     color: #005555;
+    /* @media screen and (max-width: 320px) {
+        flex-direction: column-reverse;
+    } */
     h1{
         text-align: center;
         margin: 0;
+        @media screen and (max-width: 425px) {
+            font-size: 20px;
+        }
     }
     p{
-        width: 500px;
+        /* width: 500px; */
         text-align: center;
     }
 `;
 const Property = styled.div`
     width: 95%;
     /* background-color: blue; */
-    padding: 30px 0px 30px 0px;
+    /* padding: 30px 0px 30px 0px; */
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     flex-wrap: wrap;
+    /* flex-direction: column; */
    @media screen and (max-width: 768px) {
-    flex-direction: column;
-    flex-wrap: wrap-reverse;
+    flex-direction: column-reverse;
+   }
+   @media screen and (max-width: 425px) {
+    flex-direction: column-reverse;
+    
    }
 `;
 const First = styled.div`
     width: 50%;
-    background-color: green;
+    /* background-color: green; */
     @media screen and (max-width: 768px) {
     width: 90%;
    }
     @media screen and (max-width: 425px) {
-    width: 60%;
+    width: 100%;
+   }
+   @media screen and (max-width: 320px) {
+    width: 100%;
    }
 `;
 const Div = styled.div`
     /* background-color: pink; */
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     width: 100%;
-    margin: 20px;
+    @media screen and (max-width: 320px) {
+        margin-bottom: 20px;
+        margin-top: 13px;
+    }
+    @media screen and (max-width: 768px) {
+        margin-top: 25px;
+    }
+    /* margin: 20px; */
 `;
 const Circle = styled.div`
-    width: 80px;
-    height: 80px;
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
     background-color: #8080809b;
     display: flex;
@@ -165,18 +195,33 @@ const Circle = styled.div`
     }
 `;
 const Text = styled.div`
-    width: 80%;
+    width: 200px;
     /* background-color: red; */
     margin-left: 10px;
+    @media screen and (max-width: 320px) {
+        margin-left: 15px;
+    }
     h3{
         margin: 0;
     }
     p{
         text-align: left;
+        @media screen and (max-width: 768px) {
+            width: 600px;
+        }
+        @media screen and (max-width: 425px) {
+            width: 280px;
+        }
+        @media screen and (max-width: 425px) {
+            width: 220px;
+        }
     }
 `;
 const Second = styled.div`
     width: 50%;
+    @media screen and (max-width: 320px) {
+        width: 100%;
+    }
     img{
         width: 100%;
         height: 100%;

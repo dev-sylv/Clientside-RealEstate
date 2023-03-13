@@ -87,7 +87,8 @@ const Maintext = styled.div`
   color : white;
   h3{
     font-size: 50px;
-    margin: 0;
+    /* margin: 0; */
+    margin-bottom: 15px;
   }
   p{
     font-size: 20px;
@@ -103,11 +104,19 @@ const Maintext = styled.div`
   @media screen and (max-width: 425px) {
     h3{
       font-size: 30px;
+      @media screen  and (max-width: 320px){
+    font-size: 25px;
+  }
     }
+  
     p{
       /* font-size: 12px; */
       width: 280px;
       /* background-color: red; */
+      @media screen  and (max-width: 320px){
+    font-size: 16px;
+    line-height: 23px;
+  }
     }
   }
 `;
@@ -128,7 +137,7 @@ const InputField = styled.div`
     background-color: white;
     outline: 0;
     border: 0;
-    padding-left: 30px;
+    padding-left: 20px;
   }
   @media screen and (max-width: 768px) {
     width: 450px;

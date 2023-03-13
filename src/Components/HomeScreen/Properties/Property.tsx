@@ -143,8 +143,10 @@ const Container = styled.div`
 const Wrapper = styled.div`
     width: 95%;
     /* background-color: green; */
-    display: flex;
+    display: block;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 `;
 const Properties = styled.div`
     display: flex;
@@ -154,7 +156,7 @@ const Properties = styled.div`
     color: #005555;
     font-size: 30px;
     font-weight: bold;
-    background-color: blue;
+    /* background-color: blue; */
     flex-wrap: wrap;
 `;
 const Button = styled(Link)`
@@ -174,5 +176,8 @@ text-decoration: none;
   :hover{
     transform: scale(1.05);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  }
+  @media screen and (max-width: 425px) {
+    margin-top: 15px;
   }
 `;

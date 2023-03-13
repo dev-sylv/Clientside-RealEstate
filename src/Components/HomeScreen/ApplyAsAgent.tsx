@@ -19,7 +19,7 @@ export default ApplyAgent;
 
 const Container = styled.div`
     width: 100%;
-    padding: 70px 0px 70px 0px;
+    padding: 0px 0px 50px 0px;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -31,9 +31,13 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
     h2{
         letter-spacing: 1.5px;
         font-style: italic;
+        @media screen and (max-width: 320px) {
+          font-size: 22px;
+        }
     }
 `;
 const Button = styled(Link)`

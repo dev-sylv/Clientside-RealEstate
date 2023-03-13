@@ -123,6 +123,8 @@ const Card = styled.div`
     width: 350px;
     padding: 20px 0px 20px 0px;
     background-color: white;
+    margin: 20px;
+    margin-bottom: 30px;
     border-radius: 5px;
     color: #16335A;
     position: relative;
@@ -165,7 +167,7 @@ const Img = styled.img`
 
 const Container = styled.div`
     width: 100%;
-    background-color: #80808049;
+    /* background-color: red; */
     padding: 50px 0px 20px 0px;
     display: flex;
     justify-content: center;
@@ -186,6 +188,12 @@ const Wrapper = styled.div`
     p{
         width: 500px;
         text-align: center;
+        @media screen and (max-width: 425px) {
+            width: 350px;
+        }
+        @media screen and (max-width: 320px) {
+            width: 280px;
+        }
     }
 `;
 const Property = styled.div`
@@ -193,7 +201,7 @@ const Property = styled.div`
     /* background-color: blue; */
     padding: 50px 0px 50px 0px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 `;

@@ -58,6 +58,25 @@ const Card = styled.div`
     width: 280px;
     height: 500px;
     margin: 20px;
+    background-color: red;
+    border-radius: 10px;
+    overflow: hidden;
+    /* @media screen and (max-width: 1024px) {
+        width: 250px;
+    } */
+    @media screen and (max-width: 768px) {
+        width: 330px;
+    }
+    @media screen and (max-width: 425px) {
+        width: 365px;
+    }
+    @media screen and (max-width: 375px) {
+        width: 318px;
+    }
+    @media screen and (max-width: 320px) {
+        width: 265px;
+
+    }
 `;
 const HouseImg = styled.div`
     width: 100%;
@@ -81,7 +100,7 @@ const HouseDescription = styled.div`
 const Wrapper = styled.div`
     width: 85%;
     height: 200px;
-    /* background-color: gray; */
+    /* background-color: red; */
     display: flex;
     justify-content: space-between;
     flex-direction: column;

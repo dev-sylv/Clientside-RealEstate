@@ -45,6 +45,7 @@ export default Services;
 
 const Container = styled.div`
     background-color: #F2F4F6;
+    overflow: hidden;
     /* background-color: red; */
     width: 100%;
     padding: 20px 0px 20px 0px;

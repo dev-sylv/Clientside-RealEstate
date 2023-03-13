@@ -48,16 +48,16 @@ const Footer = () => {
                 <Nav to="/signup">Become an agent</Nav>
           </Box>
 
-          <Box>
+          <Box2>
                 <h3>Support</h3>
                 <Nav to="/all-properties">Business</Nav>
                 <Nav to="/all-properties">Blog</Nav>
                 <Nav to="agents">Creative</Nav>
                 <Nav to="/contact-us">Community</Nav>
                 <Nav to="/contact-us">Contact Us</Nav>
-          </Box>
+          </Box2>
 
-          <Box>
+          <Box2>
               <h3>Contact Info</h3>
               <div>
                 <BiLocationPlus />
@@ -65,13 +65,13 @@ const Footer = () => {
               </div>
               <div>
                 <MdEmail />
-                <Nav1>nicsylvia15f@gmail.com</Nav1>
+                <Nav1>nicsylvia@gmail.com</Nav1>
               </div>
               <div>
                 <BsFillTelephoneFill />
                 <Nav1>0541516214</Nav1>
               </div>
-          </Box>
+          </Box2>
 
         </SecondDiv>
         <br />
@@ -79,7 +79,7 @@ const Footer = () => {
         <br />
         <CopyRg>
             <p>
-            Copyright @2023 MF-REAL-ESTATE. All Rights Reserved <span><a href="https://wa.me/233541516214">David Ibekwute</a></span> 
+            Copyright @2023 MF-REAL-ESTATE. All Rights Reserved <br /> <span><a href="https://wa.me/233541516214">David Ibekwute</a></span> 
             </p>
         </CopyRg>
         
@@ -113,7 +113,7 @@ const Container = styled.div`
 `;
 const Wrapper = styled.div`
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: center;
     flex-wrap: wrap;
     font-size: 18px;
@@ -122,6 +122,9 @@ const FirstDiv = styled.div`
     width : 300px;
     margin-top: 50px;
     margin-left: 90px;
+    @media screen and (max-width: 425px) {
+      margin-left: 30px;
+    }
 
     p{
         font-size: 18px;
@@ -134,6 +137,14 @@ const SecondDiv = styled.div`
     margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    @media screen and (max-width: 1024px) {
+      margin-left: 90px;
+      
+    }
+     @media screen and (max-width: 425px) {
+      margin-left: 30px;
+      grid-template-columns: 1fr;
+    }
 
 `;
 const Logo = styled.img`
@@ -142,9 +153,27 @@ const Logo = styled.img`
   object-fit: contain;
 
 `;
+const Box2 = styled.div`
+display: flex;
+flex-direction: column;
+@media screen and (max-width: 768px) {
+  margin-left: 80px;
+}
+@media screen and (max-width: 425px) {
+  margin-left: 0px;
+}
+div{
+  display: flex;
+  margin-left: 15px;
+}
+
+`;
 const Box = styled.div`
 display: flex;
 flex-direction: column;
+@media screen and (max-width: 768px) {
+  /* margin-left: 60px; */
+}
 div{
   display: flex;
   margin-left: 15px;
@@ -164,11 +193,12 @@ const Nav = styled(Link)`
     }
 `;
 const CopyRg = styled.div`
-    width: 85%;
+    width: 100%;
     height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     font-size: 13px;
     color: white;
     background-color: #005555;
